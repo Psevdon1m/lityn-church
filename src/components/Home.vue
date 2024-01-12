@@ -12,7 +12,7 @@
 
         <a
           href="https://maps.app.goo.gl/nV1YghTpbqRz99MP7"
-          class="btn btn--red"
+          class="btn btn--blue"
           target="_blank"
           >Знайти нас</a
         >
