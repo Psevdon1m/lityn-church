@@ -4,7 +4,14 @@
       <div class="header__inner">
         <div class="header__logo">
           <!-- <img src="./img/activebox-logo.png" alt="Logo" /> -->
-          <h1 style="color: aliceblue">Літин ЄХБ</h1>
+          <h1
+            style="
+              color: aliceblue;
+              text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            "
+          >
+            Літин ЄХБ
+          </h1>
         </div>
         <nav class="nav">
           <a href="" class="nav__link">Про нас</a>

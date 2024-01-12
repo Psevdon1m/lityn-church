@@ -4,10 +4,16 @@
       <div class="footer__inner">
         <div class="footer__block">
           <h4 class="footer__title">Адреса</h4>
-          <address class="footer__address">
-            <div>Богдана Хмельницького 19</div>
-            <div>Літин, Вінницька область, 22300</div>
-          </address>
+          <a
+            href="https://maps.app.goo.gl/nV1YghTpbqRz99MP7"
+            style="text-decoration: none"
+            target="_blank"
+          >
+            <address class="footer__address">
+              <div>Богдана Хмельницького 19</div>
+              <div>Літин, Вінницька область, 22300</div>
+            </address>
+          </a>
 
           <div>
             <h4 class="footer__title">Підписуйтесь</h4>
@@ -26,6 +32,13 @@
                 class="social__item"
               >
                 <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@user-ti8eh5kn6w"
+                target="_blank"
+                class="social__item"
+              >
+                <i class="fab fa-youtube"></i>
               </a>
             </div>
           </div>
@@ -95,7 +108,7 @@
               <a
                 href="https://www.instagram.com/coffeebeanlityn/"
                 target="_blank"
-                >View more photo</a
+                >Більше фото</a
               >
             </div>
           </div>

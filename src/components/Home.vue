@@ -19,6 +19,80 @@
       </div>
     </div>
   </div>
+  <section class="section section--clients">
+    <div class="container">
+      <div class="section__header">
+        <h3 class="section__suptitle">Персонал Церкви</h3>
+        <h2 class="section__title">
+          Ці особи разом творять спільноту вірних, яка росте в глибокій вірі та
+          взаємопідтримці в межах церкви.
+        </h2>
+      </div>
+
+      <div class="clients">
+        <div class="clients__item">
+          <img
+            class="clients__photo"
+            src="../assets/images/people/1.png"
+            alt=""
+          />
+          <div class="clients__name">Іван Іванов</div>
+          <div class="clients__prof">Пастор Церкви</div>
+          <div class="clients__text">
+            З преданістю провідник духовного спільноти, Пастор Іван служить як
+            духовний наставник і керівник церковної громади. Його навчання та
+            водночас ласкаве пастирство роблять церкву місцем зростання віри.
+          </div>
+        </div>
+        <div class="clients__item">
+          <img
+            class="clients__photo"
+            src="../assets/images/people/2.png"
+            alt=""
+          />
+          <div class="clients__name">Наталія Петрівна</div>
+          <div class="clients__prof">Директор служби покращення громади</div>
+          <div class="clients__text">
+            Наталія координує та сприяє службі, спрямованій на розвиток громади
+            та покращення життя її членів. Завдяки її роботі, церква стає не
+            лише місцем віруючих, але і центром взаємодії та підтримки.
+          </div>
+        </div>
+        <div class="clients__item">
+          <img
+            class="clients__photo"
+            src="../assets/images/people/3.png"
+            alt=""
+          />
+          <div class="clients__name">Михайло Сергійович</div>
+          <div class="clients__prof">Молодіжний лідер</div>
+          <div class="clients__text">
+            Михайло відзначається ентузіазмом та здібностями в організації
+            заходів для молоді. Його ведення молодіжних зібрань та подій робить
+            церкву привабливою для молоді та стимулює їхній розвиток віри.
+          </div>
+        </div>
+        <div class="clients__item">
+          <img
+            class="clients__photo"
+            src="../assets/images/people/4.png"
+            alt=""
+          />
+          <div class="clients__name">Ольга Анатоліївна</div>
+          <div class="clients__prof">
+            Координатор служби молитви та поклоніння
+          </div>
+          <div class="clients__text">
+            Ольга відповідає за координацію та лідерство в службі молитви та
+            поклоніння. Її приносить велике значення до церковного життя,
+            створюючи атмосферу поглибленого спілкування з Богом через молитву
+            та поклоніння.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---container--->
+  </section>
 </template>
 
 <script>
