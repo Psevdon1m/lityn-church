@@ -13,7 +13,7 @@
             Літин ЄХБ
           </h1>
         </div>
-        <nav class="nav">
+        <nav class="nav" :class="{ active: openBurger }">
           <a href="" class="nav__link">Про нас</a>
           <a href="" class="nav__link">Активності</a>
           <a href="" class="nav__link">Coffee bean</a>
@@ -21,8 +21,12 @@
           <a href="" class="nav__link">допомога</a>
         </nav>
 
-        <button class="burger">
-          <span class="burger__item">Menu</span>
+        <button
+          @click="openBurger = !openBurger"
+          class="nav-toggle"
+          :class="{ active: openBurger }"
+        >
+          <span class="nav-toggle__item">Menu</span>
         </button>
       </div>
     </div>
@@ -32,6 +36,11 @@
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      openBurger: false,
+    };
+  },
 };
 </script>
 

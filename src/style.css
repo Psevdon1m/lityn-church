@@ -38,30 +38,130 @@ p {
 
 /*===================Navigation====================*/
 
+/* Nav */
 .nav {
-  display: flex;
-
-  font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .nav__link {
-  margin-left: 40px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px;
+  position: relative;
+
   color: #fff;
-  text-transform: uppercase;
   text-decoration: none;
-  opacity: .75;
-  transition: opacity 0.1s linear;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  transition: color .1s linear;
 }
 
-.nav__link:first-child {
-  margin-left: 0;
+.nav__link:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+
+  background-color: #fce38a;
+  opacity: 0;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+
+  transition: opacity .1s linear;
 }
 
 .nav__link:hover {
+  color: #fce38a;
+}
 
+.nav__link:hover:after,
+.nav__link.active:after {
   opacity: 1;
+}
+
+.nav__link.active {
+  color: #fce38a;
+}
+
+/*===============NavToggle==================*/
+/* Nav toggle */
+.nav-toggle {
+  width: 30px;
+  padding: 10px 0;
+  display: none;
+
+  font-size: 0;
+  color: transparent;
+
+  border: 0;
+  background: none;
+  cursor: pointer;
+
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 1;
+}
+
+.nav-toggle:focus {
+  outline: 0;
+}
+
+.nav-toggle__item {
+  display: block;
+  width: 100%;
+  height: 3px;
+
+  background-color: #fff;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  transition: background .2s linear;
+}
+
+.nav-toggle.active .nav-toggle__item {
+  background: none;
+}
+
+.nav-toggle__item:before,
+.nav-toggle__item:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+
+  background-color: #fff;
+
+  position: absolute;
+  left: 0;
+  z-index: 1;
+
+  transition: transform .2s linear;
+}
+
+.nav-toggle__item:before {
+  top: -8px;
+}
+
+.nav-toggle__item:after {
+  bottom: -8px;
+}
+
+.nav-toggle.active .nav-toggle__item:before {
+  transform-origin: left top;
+  transform: rotate(45deg) translate3d(0px, -2px, 0)
+}
+
+.nav-toggle.active .nav-toggle__item:after {
+  transform-origin: left bottom;
+  transform: rotate(-45deg) translate3d(0px, 3px, 0);
 }
 
 /*===================Header====================*/
@@ -917,6 +1017,35 @@ p {
 }
 
 @media (max-width: 750px) {
+
+  /* Nav */
+/* Nav */
+.nav {
+  display: none;
+  width: 100%;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background-color: #0e0d32;
+}
+
+.nav.active {
+  display: block;
+}
+
+.nav__link {
+  display: block;
+  margin: 0;
+  padding: 8px 20px;
+}
+
+.nav-toggle {
+  display: block;
+}
+
+  /*Intro*/
   .intro {
       height: auto;
       padding-top: 130px;
