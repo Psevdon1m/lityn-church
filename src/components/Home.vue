@@ -102,80 +102,23 @@
         <h3 class="section__suptitle">Соціальна Активність Церкви</h3>
       </div>
       <div class="reviews">
-        <VueSlickCarousel :arrows="true" :dots="false" />
+        <SocialCarousel />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-// optional style for arrows & dots
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import SocialCarousel from "./SocialCarousel.vue";
 export default {
   name: "Home",
   components: {
-    VueSlickCarousel,
+    SocialCarousel,
   },
   data() {
-    return {
-      socials: [
-        {
-          id: 1,
-          img: "",
-          desc: "Церква надає житлову, соціальну та духовну допомогу переселенцям, які знаходять укриття в новому місті.",
-          type: "Допомога переселенцям",
-        },
-        // {
-        //   id: 2,
-        //   img: "",
-        //   desc: "Церква активно сприяє утвердженню сімейних цінностей, організовуючи програми та заходи для розвитку родин і стимулюючи усиновлення дітей.",
-        //   type: "Будинки сімейного типу",
-        // },
-        // {
-        //   id: 3,
-        //   img: "",
-        //   desc: "Церква регулярно проводить зібрання для молоді, спрямовані на їх духовний розвиток, взаємодію та служіння суспільству.",
-        //   type: "Молодіжні зібрання",
-        // },
-        // {
-        //   id: 4,
-        //   img: "",
-        //   desc: "Щотижневі зустрічі за чашкою кави, де учасники обговорюють різні аспекти віри, моралі та сучасних суспільних питань.",
-        //   type: "CoffeeBean",
-        // },
-      ],
-    };
+    return {};
   },
 };
 </script>
 
-<style scoped>
-.section-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
-
-section {
-  background-color: #f8f9fa;
-  padding: 40px 0;
-  border-bottom: 1px solid #e9ecef;
-}
-
-h2 {
-  color: #343a40;
-}
-
-p {
-  color: #6c757d;
-}
-
-#google-map {
-  height: 300px; /* Adjust the height as needed */
-  margin-top: 20px;
-  /* Add more styling for the map container if needed */
-}
-</style>
+<style scoped></style>
