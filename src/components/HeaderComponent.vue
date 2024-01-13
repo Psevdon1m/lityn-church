@@ -41,24 +41,22 @@ export default {
       openBurger: false,
     };
   },
+  mounted() {
+    setTimeout(() => {
+      let introHeight = document.getElementById("intro").clientHeight;
+      let offsetScroll = 0;
+      let header = document.getElementsByClassName("header")[0];
+
+      window.addEventListener("scroll", () => {
+        offsetScroll = window.scrollY;
+        console.log({ offsetScroll, introHeight });
+        if (offsetScroll > introHeight) {
+          header.classList.add("fixed");
+        } else {
+          header.classList.remove("fixed");
+        }
+      });
+    }, 1000);
+  },
 };
 </script>
-
-<style scoped>
-.header {
-  position: absolute;
-  z-index: 1000;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 100px;
-}
-
-.header__inner {
-  padding: 35px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #515369;
-}
-</style>
