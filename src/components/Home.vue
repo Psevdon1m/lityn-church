@@ -14,6 +14,7 @@
           href="https://maps.app.goo.gl/nV1YghTpbqRz99MP7"
           class="btn btn--blue"
           target="_blank"
+          id="personal"
           >Знайти нас</a
         >
       </div>
@@ -83,7 +84,7 @@
           <div class="clients__prof">
             Координатор служби молитви та поклоніння
           </div>
-          <div class="clients__text">
+          <div class="clients__text" id="activities">
             Ольга відповідає за координацію та лідерство в службі молитви та
             поклоніння. Її приносить велике значення до церковного життя,
             створюючи атмосферу поглибленого спілкування з Богом через молитву
@@ -101,23 +102,22 @@
         <h3 class="section__suptitle">Соціальна Активність Церкви</h3>
       </div>
       <div class="reviews">
-        <a href="#" class="reviews__btn reviews__btn--prev">Prev</a>
-        <a href="#" class="reviews__btn reviews__btn--next">Next</a>
-        <div class="reviews_items" v-for="social in socials" :key="social.id">
-          <img class="review__photo" :src="social.img" />
-          <div class="reviews__text">
-            {{ social.desc }}
-          </div>
-          <div class="reviews__author">{{ social.type }}</div>
-        </div>
+        <VueSlickCarousel :arrows="true" :dots="false" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+// optional style for arrows & dots
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
   name: "Home",
+  components: {
+    VueSlickCarousel,
+  },
   data() {
     return {
       socials: [

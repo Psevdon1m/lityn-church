@@ -10,14 +10,20 @@
               text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
             "
           >
-            Літин ЄХБ
+            <a href="#intro" style="color: aliceblue; text-decoration: none"
+              >Літин ЄХБ</a
+            >
           </h1>
         </div>
         <nav class="nav" :class="{ active: openBurger }">
           <a href="" class="nav__link">Про нас</a>
-          <a href="" class="nav__link">Активності</a>
+          <a href="#activities" class="nav__link" @click="openBurger = false"
+            >Активності</a
+          >
           <a href="" class="nav__link">Coffee bean</a>
-          <a href="" class="nav__link">Персонал</a>
+          <a href="#personal" class="nav__link" @click="openBurger = false"
+            >Персонал</a
+          >
           <a href="" class="nav__link">допомога</a>
         </nav>
 
@@ -43,20 +49,23 @@ export default {
   },
   mounted() {
     setTimeout(() => {
+      this.checkPosition(window.scrollY);
+      window.addEventListener("scroll", () => {
+        this.checkPosition(window.scrollY);
+      });
+    }, 300);
+  },
+  methods: {
+    checkPosition(offsetScroll) {
       let introHeight = document.getElementById("intro").clientHeight;
-      let offsetScroll = 0;
       let header = document.getElementsByClassName("header")[0];
 
-      window.addEventListener("scroll", () => {
-        offsetScroll = window.scrollY;
-        console.log({ offsetScroll, introHeight });
-        if (offsetScroll > introHeight) {
-          header.classList.add("fixed");
-        } else {
-          header.classList.remove("fixed");
-        }
-      });
-    }, 1000);
+      if (offsetScroll >= introHeight - 90) {
+        header.classList.add("fixed");
+      } else {
+        header.classList.remove("fixed");
+      }
+    },
   },
 };
 </script>
