@@ -16,15 +16,15 @@
           </h1>
         </div>
         <nav class="nav" :class="{ active: openBurger }">
-          <a href="" class="nav__link">Про нас</a>
-          <a href="#activities" class="nav__link" @click="openBurger = false"
-            >Активності</a
-          >
+          <a href="" class="nav__link">{{ lang.get("HEADER_ABOUT_US") }}</a>
+          <a href="#activities" class="nav__link" @click="openBurger = false">{{
+            lang.get("HEADER_ACTIVITIES")
+          }}</a>
           <a href="" class="nav__link">Coffee bean</a>
-          <a href="#personal" class="nav__link" @click="openBurger = false"
-            >Персонал</a
-          >
-          <a href="" class="nav__link">допомога</a>
+          <a href="#personal" class="nav__link" @click="openBurger = false">{{
+            lang.get("HEADER_PERSONAL")
+          }}</a>
+          <a href="" class="nav__link">{{ lang.get("HEADER_DONATION") }}</a>
         </nav>
 
         <button
@@ -32,7 +32,7 @@
           class="nav-toggle"
           :class="{ active: openBurger }"
         >
-          <span class="nav-toggle__item">Menu</span>
+          <span class="nav-toggle__item">{{ lang.get("HEADER_MENU") }}</span>
         </button>
       </div>
     </div>
@@ -40,14 +40,17 @@
 </template>
 
 <script>
+import Multilang from "../core/multilang";
 export default {
   name: "Header",
   data() {
     return {
+      lang: new Multilang(this),
       openBurger: false,
     };
   },
   mounted() {
+    this.lang.init();
     setTimeout(() => {
       this.checkPosition(window.scrollY);
       window.addEventListener("scroll", () => {

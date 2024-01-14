@@ -2,6 +2,7 @@ import Vuex from "vuex";
 
 export default new Vuex.Store({
   state: {
+    lang: "ua",
     notifications: [],
   },
   mutations: {
@@ -24,7 +25,20 @@ export default new Vuex.Store({
         (notification) => notification.id != notificationToRemove.id
       );
     },
+    setLanguage(state, lang) {
+      state.lang = lang;
+    },
   },
-  actions: {},
+  actions: {
+    updateLanguage({ commit }, lang) {
+      commit("setLanguage", lang);
+      localStorage.setItem("lang", lang);
+    },
+  },
+  getters: {
+    getLanguage(state) {
+      return state.lang;
+    },
+  },
   modules: {},
 });

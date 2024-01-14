@@ -3,7 +3,7 @@
     <div class="container">
       <div class="footer__inner">
         <div class="footer__block">
-          <h4 class="footer__title">Адреса</h4>
+          <h4 class="footer__title">{{ lang.get("FOOTER_ADDRESS") }}</h4>
           <a
             href="https://maps.app.goo.gl/nV1YghTpbqRz99MP7"
             style="text-decoration: none"
@@ -16,7 +16,7 @@
           </a>
 
           <div>
-            <h4 class="footer__title">Підписуйтесь</h4>
+            <h4 class="footer__title">{{ lang.get("FOOTER_SUBSCRIBE") }}</h4>
             <div class="social social--footer">
               <a
                 href="https://www.facebook.com/profile.php?id=100070121663393"
@@ -46,7 +46,7 @@
 
         <div class="footer__block">
           <div class="footer__col">
-            <div class="footer__title">Instagram для молоді</div>
+            <div class="footer__title">{{ lang.get("FOOTER_INSTA_FOR") }}</div>
 
             <div class="instagram">
               <a
@@ -128,3 +128,18 @@
     </div>
   </footer>
 </template>
+
+<script>
+import Multilang from "../core/multilang";
+
+export default {
+  data() {
+    return {
+      lang: new Multilang(this),
+    };
+  },
+  mounted() {
+    this.lang.init();
+  },
+};
+</script>
