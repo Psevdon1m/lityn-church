@@ -24,7 +24,9 @@
           <a href="#personal" class="nav__link" @click="openBurger = false">{{
             lang.get("HEADER_PERSONAL")
           }}</a>
-          <a href="" class="nav__link">{{ lang.get("HEADER_DONATION") }}</a>
+          <a href="#footer" class="nav__link">{{
+            lang.get("HEADER_DONATION")
+          }}</a>
           <lang-menu class="nav__link" />
         </nav>
 
