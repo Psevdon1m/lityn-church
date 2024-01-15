@@ -2,7 +2,7 @@
   <footer class="footer" id="footer">
     <div class="container">
       <div class="footer__inner">
-        <div class="footer__block">
+        <div class="footer__block" style="padding-bottom: 30px">
           <h4 class="footer__title">{{ lang.get("FOOTER_ADDRESS") }}</h4>
           <a
             href="https://maps.app.goo.gl/nV1YghTpbqRz99MP7"
@@ -43,6 +43,7 @@
             </div>
           </div>
         </div>
+
         <div class="footer__block">
           <form
             class="pb-3"

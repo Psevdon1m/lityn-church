@@ -24,9 +24,54 @@
           <a href="#personal" class="nav__link" @click="openBurger = false">{{
             lang.get("HEADER_PERSONAL")
           }}</a>
-          <a href="#footer" class="nav__link">{{
-            lang.get("HEADER_DONATION")
-          }}</a>
+          <form
+            class="pb-3 nav__donation"
+            method="POST"
+            accept-charset="utf-8"
+            action="https://www.liqpay.ua/api/3/checkout"
+          >
+            <input
+              type="hidden"
+              name="data"
+              value="eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJwdWJsaWNfa2V5IjoiaTg3NzU1MTk2NDg1IiwiYW1vdW50IjoiMjUwIiwiY3VycmVuY3kiOiJVQUgiLCJkZXNjcmlwdGlvbiI6ItCU0L7QsdGA0L7QstGW0LvRjNC90ZYg0L/QvtC20LXRgNGC0LLRg9Cy0LDQvdC90Y8iLCJ0eXBlIjoiZG9uYXRlIiwibGFuZ3VhZ2UiOiJydSJ9"
+            />
+            <input
+              type="hidden"
+              name="signature"
+              value="DdfKKT2uw9j8OFs3vpEkw1SR118="
+            />
+            <button
+              style="
+                margin-top: -10px;
+                border: medium none !important;
+                display: inline-block !important;
+                text-align: center !important;
+                padding: 3px 8px !important;
+                color: rgb(255, 255, 255) !important;
+                font-size: 16px !important;
+                font-weight: 400 !important;
+                font-family: OpenSans, sans-serif;
+                cursor: pointer !important;
+                border-radius: 2px !important;
+                background: rgb(122, 183, 43) none repeat scroll 0% 0% !important;
+                opacity: 0.8;
+              "
+              onmouseover="this.style.opacity='1';"
+              onmouseout="this.style.opacity='0.8';"
+            >
+              <!-- <img
+                src="https://static.liqpay.ua/buttons/logo-small.png"
+                name="btn_text"
+                style="
+                  margin-right: 7px !important;
+                  vertical-align: middle !important;
+                "
+              /> -->
+              <span style="vertical-align:middle; !important">{{
+                lang.get("HEADER_DONATION")
+              }}</span>
+            </button>
+          </form>
           <lang-menu class="nav__link" />
         </nav>
 

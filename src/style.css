@@ -55,6 +55,20 @@ p {
 
   transition: color .1s linear;
 }
+.nav__donation {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px;
+  position: relative;
+
+  color: #fff;
+  text-decoration: none;
+
+  transition: color .1s linear;
+}
+.nav__link:hover {
+  color: #81fe5b;
+}
 
 .nav__link:after {
   content: "";
@@ -1059,6 +1073,11 @@ background-color: #24205a;
 }
 
 .nav__link {
+  display: block;
+  margin: 0;
+  padding: 8px 20px;
+}
+.nav__donation {
   display: block;
   margin: 0;
   padding: 8px 20px;
