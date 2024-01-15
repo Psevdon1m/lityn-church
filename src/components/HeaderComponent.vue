@@ -54,10 +54,10 @@
                 cursor: pointer !important;
                 border-radius: 2px !important;
                 background: rgb(122, 183, 43) none repeat scroll 0% 0% !important;
-                opacity: 0.8;
+                opacity: 1;
               "
               onmouseover="this.style.opacity='1';"
-              onmouseout="this.style.opacity='0.8';"
+              onmouseout="this.style.opacity='1';"
             >
               <!-- <img
                 src="https://static.liqpay.ua/buttons/logo-small.png"
