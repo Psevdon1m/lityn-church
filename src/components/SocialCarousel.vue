@@ -34,25 +34,25 @@ export default {
       socials: [
         {
           id: 1,
-          img: "/activities/1.png",
+          img: "activities/1.png",
           desc: "ACTIVITY_1_DESC",
           type: "ACTIVITY_1_TYPE",
         },
         {
           id: 2,
-          img: "/activities/2.png",
+          img: "activities/2.png",
           desc: "ACTIVITY_2_DESC",
           type: "ACTIVITY_2_TYPE",
         },
         {
           id: 3,
-          img: "/activities/3.png",
-          desc: "ACTIVITY_3_DESC.",
+          img: "activities/3.png",
+          desc: "ACTIVITY_3_DESC",
           type: "ACTIVITY_3_TYPE",
         },
         {
           id: 4,
-          img: "/activities/4.png",
+          img: "activities/4.png",
           desc: "ACTIVITY_4_DESC",
           type: "ACTIVITY_4_TYPE",
         },

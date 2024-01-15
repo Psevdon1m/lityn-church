@@ -10,9 +10,9 @@
               text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
             "
           >
-            <a href="#intro" style="color: aliceblue; text-decoration: none"
-              >Літин ЄХБ</a
-            >
+            <a href="#intro" style="color: aliceblue; text-decoration: none">{{
+              lang.get("HEADER_LOGO")
+            }}</a>
           </h1>
         </div>
         <nav class="nav" :class="{ active: openBurger }">
@@ -25,6 +25,7 @@
             lang.get("HEADER_PERSONAL")
           }}</a>
           <a href="" class="nav__link">{{ lang.get("HEADER_DONATION") }}</a>
+          <lang-menu class="nav__link" />
         </nav>
 
         <button
@@ -41,6 +42,7 @@
 
 <script>
 import Multilang from "../core/multilang";
+import LangMenu from "./LangMenu.vue";
 export default {
   name: "Header",
   data() {
@@ -56,13 +58,12 @@ export default {
       window.addEventListener("scroll", () => {
         this.checkPosition(window.scrollY);
       });
-    }, 300);
+    }, 500);
   },
   methods: {
     checkPosition(offsetScroll) {
       let introHeight = document.getElementById("intro").clientHeight;
       let header = document.getElementsByClassName("header")[0];
-
       if (offsetScroll >= introHeight - 90) {
         header.classList.add("fixed");
       } else {
@@ -70,5 +71,6 @@ export default {
       }
     },
   },
+  components: { LangMenu },
 };
 </script>

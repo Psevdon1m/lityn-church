@@ -3,7 +3,7 @@
     <div class="container">
       <div class="intro__inner">
         <h1 class="intro__title">
-          Відкрийте для себе глибину віри та дружби в нашій церкві.
+          {{ lang.get("HOME_TITLE") }}
         </h1>
         <!-- <h2 class="intro__subtitle">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
@@ -15,7 +15,7 @@
           class="btn btn--blue"
           target="_blank"
           id="personal"
-          >Знайти нас</a
+          >{{ lang.get("HOME_FIND_US") }}</a
         >
       </div>
     </div>
@@ -24,10 +24,9 @@
   <section class="section section--clients">
     <div class="container">
       <div class="section__header">
-        <h3 class="section__suptitle">Персонал Церкви</h3>
+        <h3 class="section__suptitle">{{ lang.get("HOME_PERSONAL") }}</h3>
         <h2 class="section__title">
-          Ці особи разом творять спільноту вірних, яка росте в глибокій вірі та
-          взаємопідтримці в межах церкви.
+          {{ lang.get("HOME_PERSONAL_DESC") }}
         </h2>
       </div>
 
@@ -38,12 +37,10 @@
             src="../assets/images/people/1.png"
             alt=""
           />
-          <div class="clients__name">Іван Іванов</div>
-          <div class="clients__prof">Пастор Церкви</div>
+          <div class="clients__name">{{ lang.get("STAFF_NAME_1") }}</div>
+          <div class="clients__prof">{{ lang.get("STAFF_POSITION_1") }}</div>
           <div class="clients__text">
-            З преданістю провідник духовного спільноти, Пастор Іван служить як
-            духовний наставник і керівник церковної громади. Його навчання та
-            водночас ласкаве пастирство роблять церкву місцем зростання віри.
+            {{ lang.get("STAFF_DESC_1") }}
           </div>
         </div>
         <div class="clients__item">
@@ -52,12 +49,10 @@
             src="../assets/images/people/2.png"
             alt=""
           />
-          <div class="clients__name">Наталія Петрівна</div>
-          <div class="clients__prof">Директор служби покращення громади</div>
+          <div class="clients__name">{{ lang.get("STAFF_NAME_2") }}</div>
+          <div class="clients__prof">{{ lang.get("STAFF_POSITION_2") }}</div>
           <div class="clients__text">
-            Наталія координує та сприяє службі, спрямованій на розвиток громади
-            та покращення життя її членів. Завдяки її роботі, церква стає не
-            лише місцем віруючих, але і центром взаємодії та підтримки.
+            {{ lang.get("STAFF_DESC_2") }}
           </div>
         </div>
         <div class="clients__item">
@@ -66,12 +61,10 @@
             src="../assets/images/people/3.png"
             alt=""
           />
-          <div class="clients__name">Михайло Сергійович</div>
-          <div class="clients__prof">Молодіжний лідер</div>
+          <div class="clients__name">{{ lang.get("STAFF_NAME_3") }}</div>
+          <div class="clients__prof">{{ lang.get("STAFF_POSITION_3") }}</div>
           <div class="clients__text">
-            Михайло відзначається ентузіазмом та здібностями в організації
-            заходів для молоді. Його ведення молодіжних зібрань та подій робить
-            церкву привабливою для молоді та стимулює їхній розвиток віри.
+            {{ lang.get("STAFF_DESC_3") }}
           </div>
         </div>
         <div class="clients__item">
@@ -80,15 +73,12 @@
             src="../assets/images/people/4.png"
             alt=""
           />
-          <div class="clients__name">Ольга Анатоліївна</div>
+          <div class="clients__name">{{ lang.get("STAFF_NAME_4") }}</div>
           <div class="clients__prof">
-            Координатор служби молитви та поклоніння
+            {{ lang.get("STAFF_POSITION_4") }}
           </div>
           <div class="clients__text" id="activities">
-            Ольга відповідає за координацію та лідерство в службі молитви та
-            поклоніння. Її приносить велике значення до церковного життя,
-            створюючи атмосферу поглибленого спілкування з Богом через молитву
-            та поклоніння.
+            {{ lang.get("STAFF_DESC_4") }}
           </div>
         </div>
       </div>
@@ -99,7 +89,7 @@
   <div class="section">
     <div class="container">
       <div class="section__header">
-        <h3 class="section__suptitle">Соціальна Активність Церкви</h3>
+        <h3 class="section__suptitle">{{ lang.get("SOCIAL_ACTIVITIES") }}</h3>
       </div>
       <div class="reviews">
         <SocialCarousel />
@@ -109,6 +99,7 @@
 </template>
 
 <script>
+import MultiLang from "../core/multilang";
 import SocialCarousel from "./SocialCarousel.vue";
 export default {
   name: "Home",
@@ -116,7 +107,9 @@ export default {
     SocialCarousel,
   },
   data() {
-    return {};
+    return {
+      lang: new MultiLang(this),
+    };
   },
 };
 </script>

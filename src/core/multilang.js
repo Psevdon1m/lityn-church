@@ -10,7 +10,7 @@ export default class MultiLang {
     if (lang) {
       this.store.dispatch("updateLanguage", lang);
     } else {
-      this.store.dispatch("updateLanguage", "en");
+      this.store.dispatch("updateLanguage", "ua");
     }
   }
 
